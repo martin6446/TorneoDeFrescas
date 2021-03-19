@@ -31,6 +31,11 @@ public class Espartano extends Humano{
 		beber.beber();
 		
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Espartano{" +
+				"toleranciaExtra=" + toleranciaExtra +
+				"} " + super.toString();
+	}
 }

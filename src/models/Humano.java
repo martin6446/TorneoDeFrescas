@@ -38,8 +38,15 @@ public abstract class Humano{
 		this.peso = peso;
 	}
 
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Humano{" +
+				"nombre='" + nombre + '\'' +
+				", edad=" + edad +
+				", peso=" + peso +
+				", orinar=" + orinar +
+				", beber=" + beber +
+				'}';
+	}
 }

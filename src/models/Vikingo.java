@@ -32,12 +32,10 @@ public class Vikingo extends Humano{
 		
 	}
 
-
-
-
-
-
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Vikingo{" +
+				"bebedorProfecional=" + bebedorProfecional +
+				"} " + super.toString();
+	}
 }
