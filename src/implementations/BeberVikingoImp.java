@@ -1,12 +1,14 @@
-package models;
+package implementations;
 
 import interfaces.Beber;
+
+import java.util.Random;
 
 public class BeberVikingoImp implements Beber{
 
 	@Override
-	public void beber() {
-		System.out.println("bebo como vikingo");
+	public int beber() {
+		return 18;
 	}
 
 }

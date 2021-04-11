@@ -1,12 +1,12 @@
-package models;
+package implementations;
 
 import interfaces.Orinar;
 
 public class OrinarVikingoImp implements Orinar{
 
 	@Override
-	public void orinar() {
-		System.out.println("orino como vikingo");
+	public int orinar() {
+		return 12;
 	}
 	
 }

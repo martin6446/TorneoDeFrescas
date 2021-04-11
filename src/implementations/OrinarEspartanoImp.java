@@ -1,11 +1,11 @@
-package models;
+package implementations;
 
 import interfaces.Orinar;
 
 public class OrinarEspartanoImp implements Orinar{
 
 	@Override
-	public void orinar() {
-		System.out.println("orino como espartano");
+	public int orinar() {
+		return 18;
 	}
 }

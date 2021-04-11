@@ -3,34 +3,33 @@ package models;
 import interfaces.Beber;
 import interfaces.Orinar;
 
+import java.util.Random;
+
 public class Espartano extends Humano{
 
-	private Integer toleranciaExtra;
+	private final Integer toleranciaExtra;
+	private Random random;
 
 	public Espartano(String nombre, Integer edad, Integer peso, Orinar orinar, Beber beber, Integer toleranciaExtra) {
 		super(nombre, edad, peso, orinar, beber);
 		this.toleranciaExtra = toleranciaExtra;
 	}
 
-	public Integer getToleranciaExtra() {
-		return toleranciaExtra;
-	}
+	public boolean orinar(int bebida) {
+		random = new Random();
 
-	public void setToleranciaExtra(Integer toleranciaExtra) {
-		this.toleranciaExtra = toleranciaExtra;
-	}
-
-
-	public void orinar() {
-		orinar.orinar();
-		
+		if(random.nextBoolean()){
+			return ((random.nextInt(orinar.orinar()) + bebida) - toleranciaExtra) >= 25;
+		}else {
+			return (random.nextInt(orinar.orinar()) + bebida) >= 25;
+		}
 	}
 
 
-	public void beber() {
-		beber.beber();
-		
-	}
+	public int  beber() {
+		random = new Random();
+		return random.nextInt(beber.beber());
+    }
 
 	@Override
 	public String toString() {
